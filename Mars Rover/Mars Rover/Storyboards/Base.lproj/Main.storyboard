@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PNg-ZO-kP3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rover Photos-->
+        <scene sceneID="MSf-WT-v84">
+            <objects>
+                <collectionViewController id="Iy6-Tu-ZW2" customClass="RoverPhotosCollectionViewController" customModule="Mars_Rover" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Jez-5B-23q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="htE-0W-y8U">
+                            <size key="itemSize" width="189" height="189"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RoverPhotoCell" id="zRW-kW-GRs" customClass="JACRoverPhotoCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="189" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="189" height="189"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ek-Xl-hID" userLabel="Content View">
+                                            <rect key="frame" x="0.0" y="0.0" width="189" height="189"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44f-Bl-IVF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="189" height="189"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="189" id="o7S-nw-NwD"/>
+                                                <constraint firstAttribute="height" constant="189" id="q4A-CE-Hw2"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="8Ek-Xl-hID" firstAttribute="leading" secondItem="zRW-kW-GRs" secondAttribute="leading" id="Kcs-XV-8eb"/>
+                                    <constraint firstItem="8Ek-Xl-hID" firstAttribute="top" secondItem="zRW-kW-GRs" secondAttribute="top" id="ZXX-w0-iTD"/>
+                                </constraints>
+                                <size key="customSize" width="189" height="189"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Iy6-Tu-ZW2" id="hxp-GD-zUo"/>
+                            <outlet property="delegate" destination="Iy6-Tu-ZW2" id="kzr-m0-d9Q"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Rover Photos" id="dgk-D6-fIR"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3o-rP-7Xq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="206.91964285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ydu-8Y-go2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PNg-ZO-kP3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OlE-za-gQt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Iy6-Tu-ZW2" kind="relationship" relationship="rootViewController" id="tTL-iB-cov"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xpy-7r-bip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="206.91964285714286"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  JACRoverPhotoCollectionViewCell.m
 //  Mars Rover
 //
 //  Created by Jordan Christensen on 11/12/19.
 //  Copyright © 2019 Mazjap Co. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "JACRoverPhotoCollectionViewCell.h"
 
-@interface ViewController : UIViewController
-
+@implementation JACRoverPhotoCollectionViewCell
 
 @end
-
